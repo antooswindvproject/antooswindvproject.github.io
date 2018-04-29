@@ -103,16 +103,12 @@
       
     </header>
     
-     <object id="report" width="100%" height="100%" data="resources/Final Report DV ACM.pdf"></object>
+     <object id="report" width="100%" height="100%" data="resources/Final Report DV ACM.pdf#page=1&zoom=100"></object>
     <script language="javascript">
-        function autoResizeDiv(x)
-        { if (x=="youtube")
-            {document.getElementById(x).style.height = window.innerHeight*0.75 +'px';}
-		else
-			{document.getElementById(x).style.height = window.innerHeight+'px';}
-        }
-        window.onresize = autoResizeDiv;
-        autoResizeDiv('report');
+        function autoResizeDiv(x,z)
+        { document.getElementById(x).style.height = window.innerHeight*z +'px';
+		window.onresize = autoResizeDiv;}
+        autoResizeDiv('report',1);
     </script>
     <footer class="w3-container w3-teal">
       <p>Thanks for viewing!</p>
@@ -150,7 +146,7 @@
 								<div class=" w3-theme-l0 w3-center" id="work">
 								<iframe id="youtube" align="center" width="75%" height="500" src="https://www.youtube.com/embed/OTZ17OMP2vM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 								<script language="javascript">
-								autoResizeDiv('youtube');
+								autoResizeDiv('youtube',0.75);
 								</script></div>
 								
                             </ul>
